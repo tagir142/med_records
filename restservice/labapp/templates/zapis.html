@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div id='zapis'>
+        
+        <div id=mainn>
+            <h2> Запись на прием к врачу</h2>
+        </div>
+        <div class="box">
+            {% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="notification is-danger">
+    {{ messages[0] }}
+</div>
+{% endif %}
+{% endwith %}
+        <form id='zapisForm' method="POST" action="/send">
+        <div class='dd' id='ddd' >
+            <div class='custom-dropdown big raz'>
+                <label for="selectSpec">Специалисты</label>
+                <select onchange='Change()' id='selectSpec'name="spec" required="required">          
+                </select>
+            </div>
+            
+            <div class='custom-dropdown big raz'>
+                <label for="selectDate">Дата</label>
+                <select onchange='ChangeSelectDate()'id='selectDate' required='required' name='selectDate' id='selectDate'>
+                </select>
+            </div>
+            
+            <div class='custom-dropdown big raz'>
+                <label for="selectTime">Время</label>
+                <select id='selectTime' required='required' name='selectTime' id='selectTime'>
+                </select>
+            </div>
+            
+        </div>
+        <button>Записаться</button>
+    </form>
+
+    </div>
+    <script type='text/javascript' src='../static/js/changeColor.js'>
+    
+
+    </script>
+{% endblock %}

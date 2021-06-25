@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p class="welcome">
+  Здравствуйте, {{ name }}!
+</p>
+<div id='maininfo'>
+<form id='formbtns'>  
+  
+  <input id = 'profilebtt'onclick="showContent('/persdannie')" type="button" value="Персональные данные">  
+  <input id = 'profilebtt'onclick="showContent('/medkarta')" type="button" value="Медицинская карта">
+   
+</form> 
+<div id="contentBody">  
+</div>  
+
+<div id="loading" style="display: none">  
+Идет загрузка...  
+</div>  
+
+{% endblock %}

@@ -1,0 +1,34 @@
+
+
+{% block content %}
+
+  <div id='medkartacontent'>
+    <div id='mkdannie'>
+  <h2>Ваши данные:</h2>
+  <p>
+    Ваше имя: {{ name }}
+  </p>
+  <p>
+    Номер медицинского полиса: {{ medicalpolicy }}
+  </p>
+  <p>
+    Адрес электронной почты: {{ email }}
+  </p>
+  <p>
+    Номер вашего телефона: {{ login }}
+  </p>
+</div>
+<div id='mkzapisi'>
+  
+  <h2>Мои приемы</h2>
+  {%for i in meetlist%}
+  <p>Врач:{{i.namespec}}</p>
+  <p>Время:{{i.date}} </p>
+  <hr id='mkhr'>
+{%endfor%}     
+  
+  
+  
+</div>
+</div>
+{% endblock %}

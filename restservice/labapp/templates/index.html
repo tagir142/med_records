@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+        <div id=mainn>
+        <div class='zapis'>
+            {% if current_user.is_authenticated %}
+            <a href="/zapis">Записаться на прием</a>
+            {% endif %}
+            <img src="../static/img/main.png" alt="человек">
+            
+        </div>
+        <div class=nadpis>
+            <h2>Возможности</h2>
+            <hr>
+        </div>
+        <div class='abilities'>
+            
+            <div class='abil'>
+                <img src="../static/img/online zapis.png" alt="">
+                <p>Онлайн-запись, личный кабинет</p>
+            </div>
+            <div class='abil'>
+                <img src="../static/img/emk.png" alt="">
+                <p>История болезни в одном месте</p>
+            </div>
+            <div class='abil'>
+                <img src="../static/img/sms.png" alt="">
+                <p>СМС-уведомления и рассылки</p>
+            </div>
+        </div>
+        </div>
+        {% endblock %}
